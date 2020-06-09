@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-angular-5bf43": {
+      "hosting": {
+        "test-angular": [
+          "test-angular-5bf43"
+        ]
+      }
+    }
+  }
+}

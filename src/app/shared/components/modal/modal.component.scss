@@ -1,0 +1,56 @@
+@import "src/scss/variables";
+
+
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card {
+  background: $default_white;
+  color: $default_black;
+  width: 80%;
+  margin: 1% auto;
+  padding: 2%;
+  border-radius: 0;
+  box-shadow: initial;
+
+  .mat-card-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .mat-card-content {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+
+    p.content {
+      text-align: initial;
+    }
+  }
+
+  img {
+    width: 80%;
+    border-radius: 6px;
+  }
+}
+
+.align-center {
+  text-align: center;
+  clear: both;
+  display: block;
+  margin: 6px auto;
+}
+
+.td_label {
+  font-weight: bold;
+  width: 50%;
+  text-align: right;
+}
+
+.td_info {
+  width: 50%;
+  text-align: left;
+
+}

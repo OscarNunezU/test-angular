@@ -1,0 +1,26 @@
+@import "src/scss/variables";
+
+table {
+  width: 80%;
+}
+
+.container {
+  padding-left: 200px;
+}
+
+.mat-form-field {
+  font-size: 1rem;
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 1rem;
+}
+.mat-paginator {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 250px;
+}
+.mat-column-precio {
+  justify-content: flex-end;
+}

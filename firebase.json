@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "test-angular",
+      "public": "dist/test-angular",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

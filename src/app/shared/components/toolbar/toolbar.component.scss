@@ -1,0 +1,11 @@
+
+@import "src/scss/variables";
+
+a {
+  color: $default_white;
+  text-decoration: none;
+}
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}

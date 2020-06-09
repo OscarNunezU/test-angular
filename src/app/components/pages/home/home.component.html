@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="row">
+        <mat-form-field>
+            <input
+              matInput
+              (keyup)="applyFilter($event.target.value)"
+              placeholder="Producto"
+            />
+          </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="codigo">
+                <th mat-header-cell *matHeaderCellDef> <b>CODIGO</b></th>
+                <td mat-cell *matCellDef="let producto"> {{producto.codigo}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef><b>NOMBRE</b></th>
+                <td mat-cell *matCellDef="let producto"> {{producto.nombre}} </td>
+            </ng-container>
+
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="precio">
+                <th mat-header-cell *matHeaderCellDef><B>PRECIO $</B></th>
+                <td mat-cell *matCellDef="let producto"> {{producto.precio_venta}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef><B>DETALLES</B></th>
+                <td mat-cell *matCellDef="let producto">
+                    <button mat-stroked-button color="warn" (click)="view_producto(producto)">
+                      <mat-icon>search</mat-icon>
+                    </button>
+                  </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons></mat-paginator>
+    </div>
+
+</div>
